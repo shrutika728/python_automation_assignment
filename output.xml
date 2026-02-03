@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-03T15:51:29.748529" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-03T16:32:10.612042" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\shrut\OneDrive\Desktop\Python_Automation_Assignment\tests">
 <suite id="s1-s1" name="Data Driven Tests" source="C:\Users\shrut\OneDrive\Desktop\Python_Automation_Assignment\tests\data_driven_tests.robot">
 <test id="s1-s1-t1" name="Create User And Verify - Positive" line="5">
 <kw name="Create User And Verify">
 <kw name="Create API Session" owner="api_keywords">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-02-03T15:51:29.975917" level="INFO">Creating Session using : alias=jsonapi, url=https://jsonplaceholder.typicode.com, headers=,                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<msg time="2026-02-03T16:32:10.878269" level="INFO">Creating Session using : alias=jsonapi, url=https://jsonplaceholder.typicode.com, headers=,                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
 <arg>jsonapi</arg>
 <arg>${BASE_URL}</arg>
 <arg>headers=${EMPTY}</arg>
 <arg>verify=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-02-03T15:51:29.975082" elapsed="0.005834"/>
+<status status="PASS" start="2026-02-03T16:32:10.876872" elapsed="0.001909"/>
 </kw>
 <doc>Create a session to the JSONPlaceholder API.</doc>
-<status status="PASS" start="2026-02-03T15:51:29.974276" elapsed="0.006870"/>
+<status status="PASS" start="2026-02-03T16:32:10.867427" elapsed="0.011582"/>
 </kw>
 <kw name="Create New Post" owner="api_keywords">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-02-03T15:51:29.983761" level="INFO">${payload} = {'userId': '1', 'title': 'Title 1', 'body': 'This is the body for user 1.'}</msg>
+<msg time="2026-02-03T16:32:10.882406" level="INFO">${payload} = {'userId': '1', 'title': 'Title 1', 'body': 'This is the body for user 1.'}</msg>
 <var>${payload}</var>
 <arg>userId=${user_id}</arg>
 <arg>title=${title}</arg>
 <arg>body=${body}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-02-03T15:51:29.982193" elapsed="0.001710"/>
+<status status="PASS" start="2026-02-03T16:32:10.880151" elapsed="0.002385"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2026-02-03T15:51:30.831971" level="INFO">POST Request : url=https://jsonplaceholder.typicode.com/posts 
+<msg time="2026-02-03T16:32:12.033665" level="INFO">POST Request : url=https://jsonplaceholder.typicode.com/posts 
  path_url=/posts 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '75', 'Content-Type': 'application/json'} 
  body=b'{"userId": "1", "title": "Title 1", "body": "This is the body for user 1."}' 
  </msg>
-<msg time="2026-02-03T15:51:30.832549" level="INFO">POST Response : url=https://jsonplaceholder.typicode.com/posts 
+<msg time="2026-02-03T16:32:12.034751" level="INFO">POST Response : url=https://jsonplaceholder.typicode.com/posts 
  status=201, reason=Created 
- headers={'Date': 'Tue, 03 Feb 2026 10:21:30 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '96', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-expose-headers': 'Location', 'Cache-Control': 'no-cache', 'etag': 'W/"60-xhr+tL7hSLyi73JgzU/58bKzj4k"', 'expires': '-1', 'location': 'https://jsonplaceholder.typicode.com/posts/101', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=h3s9dc5WDfMmNQ5DZRxpYI2WarXk9VimQ6BIUnjGMjk%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1770114090"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=h3s9dc5WDfMmNQ5DZRxpYI2WarXk9VimQ6BIUnjGMjk%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1770114090"', 'Server': 'cloudflare', 'vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '995', 'x-ratelimit-reset': '1770114110', 'cf-cache-status': 'DYNAMIC', 'CF-RAY': '9c8133a818a0896e-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Tue, 03 Feb 2026 11:02:11 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '96', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-expose-headers': 'Location', 'Cache-Control': 'no-cache', 'etag': 'W/"60-xhr+tL7hSLyi73JgzU/58bKzj4k"', 'expires': '-1', 'location': 'https://jsonplaceholder.typicode.com/posts/101', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=YggM%2F%2BYWVOaZlQJARd7NTZPotx%2FdL22d161S%2BPKyLNc%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1770116531"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=YggM%2F%2BYWVOaZlQJARd7NTZPotx%2FdL22d161S%2BPKyLNc%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1770116531"', 'Server': 'cloudflare', 'vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '999', 'x-ratelimit-reset': '1770116570', 'cf-cache-status': 'DYNAMIC', 'CF-RAY': '9c816f419f5481d4-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
  body={
   "userId": "1",
   "title": "Title 1",
@@ -43,84 +43,84 @@
   "id": 101
 } 
  </msg>
-<msg time="2026-02-03T15:51:30.833294" level="INFO">${Response} = &lt;Response [201]&gt;</msg>
+<msg time="2026-02-03T16:32:12.035771" level="INFO">${Response} = &lt;Response [201]&gt;</msg>
 <var>${Response}</var>
 <arg>jsonapi</arg>
 <arg>/posts</arg>
 <arg>json=${payload}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-02-03T15:51:29.984193" elapsed="0.849238"/>
+<status status="PASS" start="2026-02-03T16:32:10.883020" elapsed="1.153051"/>
 </kw>
 <return>
 <value>${Response}</value>
-<status status="PASS" start="2026-02-03T15:51:30.833735" elapsed="0.000208"/>
+<status status="PASS" start="2026-02-03T16:32:12.036542" elapsed="0.000287"/>
 </return>
-<msg time="2026-02-03T15:51:30.834609" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2026-02-03T16:32:12.037826" level="INFO">${response} = &lt;Response [201]&gt;</msg>
 <var>${response}</var>
 <arg>${user_id}</arg>
 <arg>${title}</arg>
 <arg>${body}</arg>
 <doc>Create a new post for a user.</doc>
-<status status="PASS" start="2026-02-03T15:51:29.981465" elapsed="0.853265"/>
+<status status="PASS" start="2026-02-03T16:32:10.879406" elapsed="1.158648"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2026-02-03T15:51:30.838698" level="INFO">Argument types are:
+<msg time="2026-02-03T16:32:12.042742" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>201</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-02-03T15:51:30.835266" elapsed="0.003909"/>
+<status status="PASS" start="2026-02-03T16:32:12.038865" elapsed="0.004364"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response.json()['title']}</arg>
 <arg>${title}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-02-03T15:51:30.839882" elapsed="0.003845"/>
+<status status="PASS" start="2026-02-03T16:32:12.044227" elapsed="0.003399"/>
 </kw>
 <return>
 <value>${response.json()}</value>
-<status status="PASS" start="2026-02-03T15:51:30.844001" elapsed="0.000188"/>
+<status status="PASS" start="2026-02-03T16:32:12.047912" elapsed="0.000216"/>
 </return>
 <arg>Title 1</arg>
 <arg>This is the body for user 1.</arg>
 <arg>1</arg>
 <doc>Create a new user and verify the response.</doc>
-<status status="PASS" start="2026-02-03T15:51:29.973616" elapsed="0.872220"/>
+<status status="PASS" start="2026-02-03T16:32:10.866415" elapsed="1.183621"/>
 </kw>
 <kw name="Create User And Verify">
 <kw name="Create API Session" owner="api_keywords">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-02-03T15:51:30.852288" level="INFO">Creating Session using : alias=jsonapi, url=https://jsonplaceholder.typicode.com, headers=,                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<msg time="2026-02-03T16:32:12.056483" level="INFO">Creating Session using : alias=jsonapi, url=https://jsonplaceholder.typicode.com, headers=,                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
 <arg>jsonapi</arg>
 <arg>${BASE_URL}</arg>
 <arg>headers=${EMPTY}</arg>
 <arg>verify=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-02-03T15:51:30.850244" elapsed="0.002741"/>
+<status status="PASS" start="2026-02-03T16:32:12.054387" elapsed="0.002796"/>
 </kw>
 <doc>Create a session to the JSONPlaceholder API.</doc>
-<status status="PASS" start="2026-02-03T15:51:30.849275" elapsed="0.004195"/>
+<status status="PASS" start="2026-02-03T16:32:12.053460" elapsed="0.004042"/>
 </kw>
 <kw name="Create New Post" owner="api_keywords">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-02-03T15:51:30.860122" level="INFO">${payload} = {'userId': '2', 'title': 'Title 2', 'body': 'This is the body for user 2.'}</msg>
+<msg time="2026-02-03T16:32:12.061537" level="INFO">${payload} = {'userId': '2', 'title': 'Title 2', 'body': 'This is the body for user 2.'}</msg>
 <var>${payload}</var>
 <arg>userId=${user_id}</arg>
 <arg>title=${title}</arg>
 <arg>body=${body}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-02-03T15:51:30.857269" elapsed="0.003006"/>
+<status status="PASS" start="2026-02-03T16:32:12.059586" elapsed="0.002085"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2026-02-03T15:51:33.803114" level="INFO">POST Request : url=https://jsonplaceholder.typicode.com/posts 
+<msg time="2026-02-03T16:32:13.149382" level="INFO">POST Request : url=https://jsonplaceholder.typicode.com/posts 
  path_url=/posts 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '75', 'Content-Type': 'application/json'} 
  body=b'{"userId": "2", "title": "Title 2", "body": "This is the body for user 2."}' 
  </msg>
-<msg time="2026-02-03T15:51:33.803542" level="INFO">POST Response : url=https://jsonplaceholder.typicode.com/posts 
+<msg time="2026-02-03T16:32:13.149807" level="INFO">POST Response : url=https://jsonplaceholder.typicode.com/posts 
  status=201, reason=Created 
- headers={'Date': 'Tue, 03 Feb 2026 10:21:33 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '96', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-expose-headers': 'Location', 'Cache-Control': 'no-cache', 'etag': 'W/"60-U73PymsoMw7QxDIzDSwbbOPJs00"', 'expires': '-1', 'location': 'https://jsonplaceholder.typicode.com/posts/101', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=5g2YvRoPnAnZG34oxGajy9GVquxfPiM6208wUcW4ZVU%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1770114093"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=5g2YvRoPnAnZG34oxGajy9GVquxfPiM6208wUcW4ZVU%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1770114093"', 'Server': 'cloudflare', 'vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '994', 'x-ratelimit-reset': '1770114110', 'cf-cache-status': 'DYNAMIC', 'CF-RAY': '9c8133babf9b8bc7-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Tue, 03 Feb 2026 11:02:12 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '96', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-expose-headers': 'Location', 'Cache-Control': 'no-cache', 'etag': 'W/"60-U73PymsoMw7QxDIzDSwbbOPJs00"', 'expires': '-1', 'location': 'https://jsonplaceholder.typicode.com/posts/101', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=WtIMevinX95qAkPWbEQO%2FuStpYLdndGc3VN6ztubuIg%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1770116532"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=WtIMevinX95qAkPWbEQO%2FuStpYLdndGc3VN6ztubuIg%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1770116532"', 'Server': 'cloudflare', 'vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '998', 'x-ratelimit-reset': '1770116570', 'cf-cache-status': 'DYNAMIC', 'CF-RAY': '9c816f48aa1afd7f-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
  body={
   "userId": "2",
   "title": "Title 2",
@@ -128,84 +128,84 @@
   "id": 101
 } 
  </msg>
-<msg time="2026-02-03T15:51:33.804203" level="INFO">${Response} = &lt;Response [201]&gt;</msg>
+<msg time="2026-02-03T16:32:13.150415" level="INFO">${Response} = &lt;Response [201]&gt;</msg>
 <var>${Response}</var>
 <arg>jsonapi</arg>
 <arg>/posts</arg>
 <arg>json=${payload}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-02-03T15:51:30.860870" elapsed="2.943461"/>
+<status status="PASS" start="2026-02-03T16:32:12.062188" elapsed="1.088358"/>
 </kw>
 <return>
 <value>${Response}</value>
-<status status="PASS" start="2026-02-03T15:51:33.804619" elapsed="0.000149"/>
+<status status="PASS" start="2026-02-03T16:32:13.150820" elapsed="0.000141"/>
 </return>
-<msg time="2026-02-03T15:51:33.805343" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2026-02-03T16:32:13.151527" level="INFO">${response} = &lt;Response [201]&gt;</msg>
 <var>${response}</var>
 <arg>${user_id}</arg>
 <arg>${title}</arg>
 <arg>${body}</arg>
 <doc>Create a new post for a user.</doc>
-<status status="PASS" start="2026-02-03T15:51:30.854753" elapsed="2.950705"/>
+<status status="PASS" start="2026-02-03T16:32:12.058154" elapsed="1.093491"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2026-02-03T15:51:33.808524" level="INFO">Argument types are:
+<msg time="2026-02-03T16:32:13.154499" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>201</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-02-03T15:51:33.805955" elapsed="0.002838"/>
+<status status="PASS" start="2026-02-03T16:32:13.152153" elapsed="0.002615"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response.json()['title']}</arg>
 <arg>${title}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-02-03T15:51:33.809258" elapsed="0.002515"/>
+<status status="PASS" start="2026-02-03T16:32:13.155264" elapsed="0.003376"/>
 </kw>
 <return>
 <value>${response.json()}</value>
-<status status="PASS" start="2026-02-03T15:51:33.812039" elapsed="0.000131"/>
+<status status="PASS" start="2026-02-03T16:32:13.158890" elapsed="0.000135"/>
 </return>
 <arg>Title 2</arg>
 <arg>This is the body for user 2.</arg>
 <arg>2</arg>
 <doc>Create a new user and verify the response.</doc>
-<status status="PASS" start="2026-02-03T15:51:30.847677" elapsed="2.966025"/>
+<status status="PASS" start="2026-02-03T16:32:12.051969" elapsed="1.108605"/>
 </kw>
 <kw name="Create User And Verify">
 <kw name="Create API Session" owner="api_keywords">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-02-03T15:51:33.819663" level="INFO">Creating Session using : alias=jsonapi, url=https://jsonplaceholder.typicode.com, headers=,                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<msg time="2026-02-03T16:32:13.166452" level="INFO">Creating Session using : alias=jsonapi, url=https://jsonplaceholder.typicode.com, headers=,                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
 <arg>jsonapi</arg>
 <arg>${BASE_URL}</arg>
 <arg>headers=${EMPTY}</arg>
 <arg>verify=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-02-03T15:51:33.817535" elapsed="0.002730"/>
+<status status="PASS" start="2026-02-03T16:32:13.164475" elapsed="0.002603"/>
 </kw>
 <doc>Create a session to the JSONPlaceholder API.</doc>
-<status status="PASS" start="2026-02-03T15:51:33.816631" elapsed="0.004008"/>
+<status status="PASS" start="2026-02-03T16:32:13.163534" elapsed="0.003856"/>
 </kw>
 <kw name="Create New Post" owner="api_keywords">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-02-03T15:51:33.827777" level="INFO">${payload} = {'userId': '3', 'title': 'Title 3', 'body': 'This is the body for user 3.'}</msg>
+<msg time="2026-02-03T16:32:13.171329" level="INFO">${payload} = {'userId': '3', 'title': 'Title 3', 'body': 'This is the body for user 3.'}</msg>
 <var>${payload}</var>
 <arg>userId=${user_id}</arg>
 <arg>title=${title}</arg>
 <arg>body=${body}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-02-03T15:51:33.824075" elapsed="0.003931"/>
+<status status="PASS" start="2026-02-03T16:32:13.169469" elapsed="0.001993"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2026-02-03T15:51:35.207783" level="INFO">POST Request : url=https://jsonplaceholder.typicode.com/posts 
+<msg time="2026-02-03T16:32:14.056209" level="INFO">POST Request : url=https://jsonplaceholder.typicode.com/posts 
  path_url=/posts 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '75', 'Content-Type': 'application/json'} 
  body=b'{"userId": "3", "title": "Title 3", "body": "This is the body for user 3."}' 
  </msg>
-<msg time="2026-02-03T15:51:35.208473" level="INFO">POST Response : url=https://jsonplaceholder.typicode.com/posts 
+<msg time="2026-02-03T16:32:14.056597" level="INFO">POST Response : url=https://jsonplaceholder.typicode.com/posts 
  status=201, reason=Created 
- headers={'Date': 'Tue, 03 Feb 2026 10:21:34 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '96', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-expose-headers': 'Location', 'Cache-Control': 'no-cache', 'etag': 'W/"60-+2bGdL+m92dIA4w2GM6719womzU"', 'expires': '-1', 'location': 'https://jsonplaceholder.typicode.com/posts/101', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=SVYOB6jrC0pYmO3bmrKSuM83RKv0LvPUDy1RGNSq4YI%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1770114094"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=SVYOB6jrC0pYmO3bmrKSuM83RKv0LvPUDy1RGNSq4YI%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1770114094"', 'Server': 'cloudflare', 'vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '993', 'x-ratelimit-reset': '1770114110', 'cf-cache-status': 'DYNAMIC', 'CF-RAY': '9c8133c139b637f4-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Tue, 03 Feb 2026 11:02:13 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '96', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-expose-headers': 'Location', 'Cache-Control': 'no-cache', 'etag': 'W/"60-+2bGdL+m92dIA4w2GM6719womzU"', 'expires': '-1', 'location': 'https://jsonplaceholder.typicode.com/posts/101', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=id8DM1paEJ7MhfTgh7yv%2BSImz91ymItKPof5SmfhItU%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1770116533"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=id8DM1paEJ7MhfTgh7yv%2BSImz91ymItKPof5SmfhItU%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1770116533"', 'Server': 'cloudflare', 'vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '997', 'x-ratelimit-reset': '1770116570', 'cf-cache-status': 'DYNAMIC', 'CF-RAY': '9c816f4e6c4d6be5-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
  body={
   "userId": "3",
   "title": "Title 3",
@@ -213,81 +213,81 @@
   "id": 101
 } 
  </msg>
-<msg time="2026-02-03T15:51:35.209260" level="INFO">${Response} = &lt;Response [201]&gt;</msg>
+<msg time="2026-02-03T16:32:14.057136" level="INFO">${Response} = &lt;Response [201]&gt;</msg>
 <var>${Response}</var>
 <arg>jsonapi</arg>
 <arg>/posts</arg>
 <arg>json=${payload}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-02-03T15:51:33.828921" elapsed="1.380488"/>
+<status status="PASS" start="2026-02-03T16:32:13.171953" elapsed="0.885309"/>
 </kw>
 <return>
 <value>${Response}</value>
-<status status="PASS" start="2026-02-03T15:51:35.209737" elapsed="0.000157"/>
+<status status="PASS" start="2026-02-03T16:32:14.057537" elapsed="0.000155"/>
 </return>
-<msg time="2026-02-03T15:51:35.210496" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2026-02-03T16:32:14.058264" level="INFO">${response} = &lt;Response [201]&gt;</msg>
 <var>${response}</var>
 <arg>${user_id}</arg>
 <arg>${title}</arg>
 <arg>${body}</arg>
 <doc>Create a new post for a user.</doc>
-<status status="PASS" start="2026-02-03T15:51:33.821277" elapsed="1.389337"/>
+<status status="PASS" start="2026-02-03T16:32:13.168024" elapsed="0.890358"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2026-02-03T15:51:35.213564" level="INFO">Argument types are:
+<msg time="2026-02-03T16:32:14.061314" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>201</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-02-03T15:51:35.211110" elapsed="0.002717"/>
+<status status="PASS" start="2026-02-03T16:32:14.058897" elapsed="0.002686"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response.json()['title']}</arg>
 <arg>${title}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-02-03T15:51:35.214303" elapsed="0.003873"/>
+<status status="PASS" start="2026-02-03T16:32:14.062067" elapsed="0.002549"/>
 </kw>
 <return>
 <value>${response.json()}</value>
-<status status="PASS" start="2026-02-03T15:51:35.218572" elapsed="0.000282"/>
+<status status="PASS" start="2026-02-03T16:32:14.064858" elapsed="0.000127"/>
 </return>
 <arg>Title 3</arg>
 <arg>This is the body for user 3.</arg>
 <arg>3</arg>
 <doc>Create a new user and verify the response.</doc>
-<status status="PASS" start="2026-02-03T15:51:33.815211" elapsed="1.405905"/>
+<status status="PASS" start="2026-02-03T16:32:13.162037" elapsed="0.905275"/>
 </kw>
 <doc>Verify that a new user can be created and the response is correct.</doc>
-<status status="PASS" start="2026-02-03T15:51:29.972378" elapsed="5.250055"/>
+<status status="PASS" start="2026-02-03T16:32:10.864637" elapsed="3.203811"/>
 </test>
-<status status="PASS" start="2026-02-03T15:51:29.825401" elapsed="5.400505"/>
+<status status="PASS" start="2026-02-03T16:32:10.661967" elapsed="3.409562"/>
 </suite>
 <suite id="s1-s2" name="User Api Tests" source="C:\Users\shrut\OneDrive\Desktop\Python_Automation_Assignment\tests\user_api_tests.robot">
 <test id="s1-s2-t1" name="Test Get All Users - Positive" line="5">
 <kw name="Create API Session" owner="api_keywords">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-02-03T15:51:35.241917" level="INFO">Creating Session using : alias=jsonapi, url=https://jsonplaceholder.typicode.com, headers=,                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<msg time="2026-02-03T16:32:14.090780" level="INFO">Creating Session using : alias=jsonapi, url=https://jsonplaceholder.typicode.com, headers=,                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
 <arg>jsonapi</arg>
 <arg>${BASE_URL}</arg>
 <arg>headers=${EMPTY}</arg>
 <arg>verify=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-02-03T15:51:35.240636" elapsed="0.001638"/>
+<status status="PASS" start="2026-02-03T16:32:14.089424" elapsed="0.001886"/>
 </kw>
 <doc>Create a session to the JSONPlaceholder API.</doc>
-<status status="PASS" start="2026-02-03T15:51:35.240004" elapsed="0.002465"/>
+<status status="PASS" start="2026-02-03T16:32:14.088351" elapsed="0.003320"/>
 </kw>
 <kw name="Get All Users" owner="api_keywords">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2026-02-03T15:51:36.745176" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/users 
+<msg time="2026-02-03T16:32:14.819716" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/users 
  path_url=/users 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2026-02-03T15:51:36.745806" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/users 
+<msg time="2026-02-03T16:32:14.820136" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/users 
  status=200, reason=OK 
- headers={'Date': 'Tue, 03 Feb 2026 10:21:36 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '1847', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'Cache-Control': 'max-age=43200', 'Content-Encoding': 'gzip', 'etag': 'W/"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ"', 'expires': '-1', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=nZhVoyypA48y5%2FAbO7Xs3zB0bF7iL4sfOiMaa6sQUvA%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1763569631"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=nZhVoyypA48y5%2FAbO7Xs3zB0bF7iL4sfOiMaa6sQUvA%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1763569631"', 'Server': 'cloudflare', 'vary': 'Origin, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '999', 'x-ratelimit-reset': '1763569633', 'Age': '15574', 'Accept-Ranges': 'bytes', 'cf-cache-status': 'HIT', 'CF-RAY': '9c8133ce8c388a13-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Tue, 03 Feb 2026 11:02:14 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '1847', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'Cache-Control': 'max-age=43200', 'Content-Encoding': 'gzip', 'etag': 'W/"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ"', 'expires': '-1', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=nZhVoyypA48y5%2FAbO7Xs3zB0bF7iL4sfOiMaa6sQUvA%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1763569631"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=nZhVoyypA48y5%2FAbO7Xs3zB0bF7iL4sfOiMaa6sQUvA%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1763569631"', 'Server': 'cloudflare', 'vary': 'Origin, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '999', 'x-ratelimit-reset': '1763569633', 'Age': '18012', 'Accept-Ranges': 'bytes', 'cf-cache-status': 'HIT', 'CF-RAY': '9c816f5488e4fcf8-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
  body=[
   {
     "id": 1,
@@ -521,65 +521,65 @@
   }
 ] 
  </msg>
-<msg time="2026-02-03T15:51:36.747056" level="INFO">${Response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-02-03T16:32:14.820872" level="INFO">${Response} = &lt;Response [200]&gt;</msg>
 <var>${Response}</var>
 <arg>jsonapi</arg>
 <arg>/users</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-02-03T15:51:35.243777" elapsed="1.503499"/>
+<status status="PASS" start="2026-02-03T16:32:14.093658" elapsed="0.727338"/>
 </kw>
 <return>
 <value>${Response}</value>
-<status status="PASS" start="2026-02-03T15:51:36.747760" elapsed="0.000225"/>
+<status status="PASS" start="2026-02-03T16:32:14.821258" elapsed="0.000156"/>
 </return>
-<msg time="2026-02-03T15:51:36.749041" level="INFO">${Response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-02-03T16:32:14.822014" level="INFO">${Response} = &lt;Response [200]&gt;</msg>
 <var>${Response}</var>
 <doc>Get a list of all users from the API.</doc>
-<status status="PASS" start="2026-02-03T15:51:35.243125" elapsed="1.506192"/>
+<status status="PASS" start="2026-02-03T16:32:14.092560" elapsed="0.729630"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2026-02-03T15:51:36.755958" level="INFO">Argument types are:
+<msg time="2026-02-03T16:32:14.826734" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${Response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-02-03T15:51:36.751731" elapsed="0.004524"/>
+<status status="PASS" start="2026-02-03T16:32:14.823417" elapsed="0.003608"/>
 </kw>
 <kw name="Length Should Be" owner="BuiltIn">
-<msg time="2026-02-03T15:51:36.761440" level="INFO">Length is 10.</msg>
+<msg time="2026-02-03T16:32:14.831168" level="INFO">Length is 10.</msg>
 <arg>${Response.json()}</arg>
 <arg>10</arg>
 <doc>Verifies that the length of the given item is correct.</doc>
-<status status="PASS" start="2026-02-03T15:51:36.757131" elapsed="0.005162"/>
+<status status="PASS" start="2026-02-03T16:32:14.827903" elapsed="0.003513"/>
 </kw>
 <doc>Verify that all users can be retrieved from the API.</doc>
-<status status="PASS" start="2026-02-03T15:51:35.238001" elapsed="1.527112"/>
+<status status="PASS" start="2026-02-03T16:32:14.086055" elapsed="0.746357"/>
 </test>
 <test id="s1-s2-t2" name="Test Get User By ID - Validate payload" line="12">
 <kw name="Create API Session" owner="api_keywords">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-02-03T15:51:36.777105" level="INFO">Creating Session using : alias=jsonapi, url=https://jsonplaceholder.typicode.com, headers=,                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<msg time="2026-02-03T16:32:14.845601" level="INFO">Creating Session using : alias=jsonapi, url=https://jsonplaceholder.typicode.com, headers=,                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
 <arg>jsonapi</arg>
 <arg>${BASE_URL}</arg>
 <arg>headers=${EMPTY}</arg>
 <arg>verify=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-02-03T15:51:36.773082" elapsed="0.005060"/>
+<status status="PASS" start="2026-02-03T16:32:14.841606" elapsed="0.005015"/>
 </kw>
 <doc>Create a session to the JSONPlaceholder API.</doc>
-<status status="PASS" start="2026-02-03T15:51:36.771338" elapsed="0.007380"/>
+<status status="PASS" start="2026-02-03T16:32:14.839499" elapsed="0.008250"/>
 </kw>
 <kw name="Get User By ID" owner="api_keywords">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2026-02-03T15:51:37.451107" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/posts/1 
+<msg time="2026-02-03T16:32:15.476611" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/posts/1 
  path_url=/posts/1 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2026-02-03T15:51:37.451559" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/posts/1 
+<msg time="2026-02-03T16:32:15.477244" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/posts/1 
  status=200, reason=OK 
- headers={'Date': 'Tue, 03 Feb 2026 10:21:37 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'Cache-Control': 'max-age=43200', 'etag': 'W/"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU"', 'expires': '-1', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=fYWdnEf0DmCzgr0VsN5e6AtGFTukaisQ17mn0sPpnh8%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1769696362"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=fYWdnEf0DmCzgr0VsN5e6AtGFTukaisQ17mn0sPpnh8%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1769696362"', 'Server': 'cloudflare', 'vary': 'Origin, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '999', 'x-ratelimit-reset': '1769696416', 'Age': '14525', 'cf-cache-status': 'HIT', 'Content-Encoding': 'zstd', 'CF-RAY': '9c8133d2feb99d24-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Tue, 03 Feb 2026 11:02:15 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'Cache-Control': 'max-age=43200', 'etag': 'W/"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU"', 'expires': '-1', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=fYWdnEf0DmCzgr0VsN5e6AtGFTukaisQ17mn0sPpnh8%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1769696362"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=fYWdnEf0DmCzgr0VsN5e6AtGFTukaisQ17mn0sPpnh8%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1769696362"', 'Server': 'cloudflare', 'vary': 'Origin, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '999', 'x-ratelimit-reset': '1769696416', 'Age': '16963', 'cf-cache-status': 'HIT', 'Content-Encoding': 'zstd', 'CF-RAY': '9c816f58af49fdc7-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
  body={
   "userId": 1,
   "id": 1,
@@ -587,73 +587,73 @@
   "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
 } 
  </msg>
-<msg time="2026-02-03T15:51:37.452147" level="INFO">${Response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-02-03T16:32:15.478118" level="INFO">${Response} = &lt;Response [200]&gt;</msg>
 <var>${Response}</var>
 <arg>jsonapi</arg>
 <arg>/posts/1</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-02-03T15:51:36.781109" elapsed="0.671162"/>
+<status status="PASS" start="2026-02-03T16:32:14.853183" elapsed="0.625185"/>
 </kw>
 <return>
 <value>${Response}</value>
-<status status="PASS" start="2026-02-03T15:51:37.452554" elapsed="0.000146"/>
+<status status="PASS" start="2026-02-03T16:32:15.478886" elapsed="0.000251"/>
 </return>
-<msg time="2026-02-03T15:51:37.453328" level="INFO">${Response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-02-03T16:32:15.479891" level="INFO">${Response} = &lt;Response [200]&gt;</msg>
 <var>${Response}</var>
 <doc>Get a user by their ID.</doc>
-<status status="PASS" start="2026-02-03T15:51:36.779990" elapsed="0.673455"/>
+<status status="PASS" start="2026-02-03T16:32:14.851497" elapsed="0.628521"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2026-02-03T15:51:37.457182" level="INFO">Argument types are:
+<msg time="2026-02-03T16:32:15.484790" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${Response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-02-03T15:51:37.454575" elapsed="0.002880"/>
+<status status="PASS" start="2026-02-03T16:32:15.481174" elapsed="0.008051"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${Response.json()}</arg>
 <arg>title</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2026-02-03T15:51:37.458383" elapsed="0.002000"/>
+<status status="PASS" start="2026-02-03T16:32:15.490228" elapsed="0.001887"/>
 </kw>
 <doc>Verify that a user can be retrieved by their ID and the payload is</doc>
-<status status="PASS" start="2026-02-03T15:51:36.768049" elapsed="0.693271"/>
+<status status="PASS" start="2026-02-03T16:32:14.834755" elapsed="0.658488"/>
 </test>
 <test id="s1-s2-t3" name="Test Create New Post - Positive" line="19">
 <kw name="Create API Session" owner="api_keywords">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-02-03T15:51:37.471882" level="INFO">Creating Session using : alias=jsonapi, url=https://jsonplaceholder.typicode.com, headers=,                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<msg time="2026-02-03T16:32:15.503358" level="INFO">Creating Session using : alias=jsonapi, url=https://jsonplaceholder.typicode.com, headers=,                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
 <arg>jsonapi</arg>
 <arg>${BASE_URL}</arg>
 <arg>headers=${EMPTY}</arg>
 <arg>verify=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-02-03T15:51:37.469839" elapsed="0.002662"/>
+<status status="PASS" start="2026-02-03T16:32:15.500704" elapsed="0.003359"/>
 </kw>
 <doc>Create a session to the JSONPlaceholder API.</doc>
-<status status="PASS" start="2026-02-03T15:51:37.468755" elapsed="0.004083"/>
+<status status="PASS" start="2026-02-03T16:32:15.498771" elapsed="0.005714"/>
 </kw>
 <kw name="Create New Post" owner="api_keywords">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-02-03T15:51:37.477229" level="INFO">${payload} = {'userId': '1', 'title': 'Test Title', 'body': 'This is a test body.'}</msg>
+<msg time="2026-02-03T16:32:15.509465" level="INFO">${payload} = {'userId': '1', 'title': 'Test Title', 'body': 'This is a test body.'}</msg>
 <var>${payload}</var>
 <arg>userId=${user_id}</arg>
 <arg>title=${title}</arg>
 <arg>body=${body}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-02-03T15:51:37.475271" elapsed="0.002089"/>
+<status status="PASS" start="2026-02-03T16:32:15.507113" elapsed="0.002502"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2026-02-03T15:51:38.717647" level="INFO">POST Request : url=https://jsonplaceholder.typicode.com/posts 
+<msg time="2026-02-03T16:32:16.959472" level="INFO">POST Request : url=https://jsonplaceholder.typicode.com/posts 
  path_url=/posts 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '70', 'Content-Type': 'application/json'} 
  body=b'{"userId": "1", "title": "Test Title", "body": "This is a test body."}' 
  </msg>
-<msg time="2026-02-03T15:51:38.718049" level="INFO">POST Response : url=https://jsonplaceholder.typicode.com/posts 
+<msg time="2026-02-03T16:32:16.959902" level="INFO">POST Response : url=https://jsonplaceholder.typicode.com/posts 
  status=201, reason=Created 
- headers={'Date': 'Tue, 03 Feb 2026 10:21:38 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '91', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-expose-headers': 'Location', 'Cache-Control': 'no-cache', 'etag': 'W/"5b-d9CxKd/qagkVRbFILetDnATrja4"', 'expires': '-1', 'location': 'https://jsonplaceholder.typicode.com/posts/101', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=WK1zneplpXBhal0Rz5OIKtKzZxnt9kbmrCxQDsPT%2Fo8%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1770114098"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=WK1zneplpXBhal0Rz5OIKtKzZxnt9kbmrCxQDsPT%2Fo8%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1770114098"', 'Server': 'cloudflare', 'vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '992', 'x-ratelimit-reset': '1770114110', 'cf-cache-status': 'DYNAMIC', 'CF-RAY': '9c8133d6dc155c33-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Tue, 03 Feb 2026 11:02:16 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '91', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'access-control-expose-headers': 'Location', 'Cache-Control': 'no-cache', 'etag': 'W/"5b-d9CxKd/qagkVRbFILetDnATrja4"', 'expires': '-1', 'location': 'https://jsonplaceholder.typicode.com/posts/101', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=bIRzczSen7Hiru%2F8pKmx1WCh41Iu%2BT1DhukU15sR7%2FU%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1770116536"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=bIRzczSen7Hiru%2F8pKmx1WCh41Iu%2BT1DhukU15sR7%2FU%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1770116536"', 'Server': 'cloudflare', 'vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '996', 'x-ratelimit-reset': '1770116570', 'cf-cache-status': 'DYNAMIC', 'CF-RAY': '9c816f5f7c684b6d-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
  body={
   "userId": "1",
   "title": "Test Title",
@@ -661,92 +661,92 @@
   "id": 101
 } 
  </msg>
-<msg time="2026-02-03T15:51:38.718670" level="INFO">${Response} = &lt;Response [201]&gt;</msg>
+<msg time="2026-02-03T16:32:16.960542" level="INFO">${Response} = &lt;Response [201]&gt;</msg>
 <var>${Response}</var>
 <arg>jsonapi</arg>
 <arg>/posts</arg>
 <arg>json=${payload}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-02-03T15:51:37.477854" elapsed="1.240939"/>
+<status status="PASS" start="2026-02-03T16:32:15.510207" elapsed="1.450462"/>
 </kw>
 <return>
 <value>${Response}</value>
-<status status="PASS" start="2026-02-03T15:51:38.719075" elapsed="0.000148"/>
+<status status="PASS" start="2026-02-03T16:32:16.960939" elapsed="0.000169"/>
 </return>
-<msg time="2026-02-03T15:51:38.719834" level="INFO">${Response} = &lt;Response [201]&gt;</msg>
+<msg time="2026-02-03T16:32:16.961677" level="INFO">${Response} = &lt;Response [201]&gt;</msg>
 <var>${Response}</var>
 <arg>1</arg>
 <arg>Test Title</arg>
 <arg>This is a test body.</arg>
 <doc>Create a new post for a user.</doc>
-<status status="PASS" start="2026-02-03T15:51:37.473995" elapsed="1.245956"/>
+<status status="PASS" start="2026-02-03T16:32:15.505520" elapsed="1.456275"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2026-02-03T15:51:38.723516" level="INFO">Argument types are:
+<msg time="2026-02-03T16:32:16.966668" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${Response.status_code}</arg>
 <arg>201</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-02-03T15:51:38.721041" elapsed="0.002732"/>
+<status status="PASS" start="2026-02-03T16:32:16.963077" elapsed="0.003860"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${Response.json()['title']}</arg>
 <arg>Test Title</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-02-03T15:51:38.724728" elapsed="0.002544"/>
+<status status="PASS" start="2026-02-03T16:32:16.967863" elapsed="0.002597"/>
 </kw>
 <doc>Verify that a new post can be created for a user.</doc>
-<status status="PASS" start="2026-02-03T15:51:37.464028" elapsed="1.264532"/>
+<status status="PASS" start="2026-02-03T16:32:15.495501" elapsed="1.475858"/>
 </test>
 <test id="s1-s2-t4" name="Negative Test - Invalid Endpoint" line="26">
 <kw name="Create API Session" owner="api_keywords">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-02-03T15:51:38.739122" level="INFO">Creating Session using : alias=jsonapi, url=https://jsonplaceholder.typicode.com, headers=,                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<msg time="2026-02-03T16:32:16.983715" level="INFO">Creating Session using : alias=jsonapi, url=https://jsonplaceholder.typicode.com, headers=,                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
 <arg>jsonapi</arg>
 <arg>${BASE_URL}</arg>
 <arg>headers=${EMPTY}</arg>
 <arg>verify=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-02-03T15:51:38.736150" elapsed="0.003599"/>
+<status status="PASS" start="2026-02-03T16:32:16.979756" elapsed="0.004962"/>
 </kw>
 <doc>Create a session to the JSONPlaceholder API.</doc>
-<status status="PASS" start="2026-02-03T15:51:38.735034" elapsed="0.005060"/>
+<status status="PASS" start="2026-02-03T16:32:16.977539" elapsed="0.007940"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2026-02-03T15:51:39.446488" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/invalid 
+<msg time="2026-02-03T16:32:17.966802" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/invalid 
  path_url=/invalid 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2026-02-03T15:51:39.447086" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/invalid 
+<msg time="2026-02-03T16:32:17.967436" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/invalid 
  status=404, reason=Not Found 
- headers={'Date': 'Tue, 03 Feb 2026 10:21:39 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'Cache-Control': 'max-age=43200', 'etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'expires': '-1', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Vnxz5tKvEPCQiofaWTShkjrX%2FyNxzD%2BVmckc6NTdJ8c%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1770109862"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=Vnxz5tKvEPCQiofaWTShkjrX%2FyNxzD%2BVmckc6NTdJ8c%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1770109862"', 'Server': 'cloudflare', 'vary': 'Origin, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '995', 'x-ratelimit-reset': '1770109910', 'Age': '4236', 'cf-cache-status': 'HIT', 'Content-Encoding': 'zstd', 'CF-RAY': '9c8133df6d273de4-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Tue, 03 Feb 2026 11:02:17 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-credentials': 'true', 'Cache-Control': 'max-age=43200', 'etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'expires': '-1', 'nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'pragma': 'no-cache', 'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Vnxz5tKvEPCQiofaWTShkjrX%2FyNxzD%2BVmckc6NTdJ8c%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1770109862"}],"max_age":3600}', 'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=Vnxz5tKvEPCQiofaWTShkjrX%2FyNxzD%2BVmckc6NTdJ8c%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1770109862"', 'Server': 'cloudflare', 'vary': 'Origin, Accept-Encoding', 'via': '2.0 heroku-router', 'x-content-type-options': 'nosniff', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '995', 'x-ratelimit-reset': '1770109910', 'Age': '6675', 'cf-cache-status': 'HIT', 'Content-Encoding': 'zstd', 'CF-RAY': '9c816f67fc656595-SIN', 'alt-svc': 'h3=":443"; ma=86400'} 
  body={} 
  </msg>
-<msg time="2026-02-03T15:51:39.447811" level="INFO">${Response} = &lt;Response [404]&gt;</msg>
+<msg time="2026-02-03T16:32:17.968369" level="INFO">${Response} = &lt;Response [404]&gt;</msg>
 <var>${Response}</var>
 <arg>jsonapi</arg>
 <arg>/invalid</arg>
 <arg>expected_status=404</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-02-03T15:51:38.741002" elapsed="0.707054"/>
+<status status="PASS" start="2026-02-03T16:32:16.986920" elapsed="0.981699"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2026-02-03T15:51:39.453100" level="INFO">Argument types are:
+<msg time="2026-02-03T16:32:17.975359" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${Response.status_code}</arg>
 <arg>404</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-02-03T15:51:39.449716" elapsed="0.003665"/>
+<status status="PASS" start="2026-02-03T16:32:17.971218" elapsed="0.004419"/>
 </kw>
 <doc>Verify that accessing an invalid endpoint returns a 404 status code.</doc>
-<status status="PASS" start="2026-02-03T15:51:38.731502" elapsed="0.722922"/>
+<status status="PASS" start="2026-02-03T16:32:16.973693" elapsed="1.002865"/>
 </test>
-<status status="PASS" start="2026-02-03T15:51:35.230239" elapsed="4.227673"/>
+<status status="PASS" start="2026-02-03T16:32:14.075420" elapsed="3.904022"/>
 </suite>
-<status status="PASS" start="2026-02-03T15:51:29.752592" elapsed="9.710836"/>
+<status status="PASS" start="2026-02-03T16:32:10.614812" elapsed="7.376157"/>
 </suite>
 <statistics>
 <total>
@@ -761,5 +761,6 @@
 </suite>
 </statistics>
 <errors>
+<msg time="2026-02-03T16:32:10.861224" level="WARN">Imported library 'C:\Users\shrut\OneDrive\Desktop\Python_Automation_Assignment\libraries\api_validators.py' contains no keywords.</msg>
 </errors>
 </robot>

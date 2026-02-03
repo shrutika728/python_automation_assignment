@@ -1,6 +1,7 @@
 *** Settings ***
 Library          RequestsLibrary
 Library          Collections
+Library          ../libraries/api_validators.py
 Resource         ../resources/variables.robot
 
 *** Keywords ***
