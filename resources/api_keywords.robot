@@ -12,6 +12,8 @@ Create API Session
 Get All Users
     [Documentation]     Get a list of all users from the API.
     ${Response}=    GET On Session    jsonapi    /users
+    Validate Status Code    ${Response}    200
+    Validate Key Present   ${Response}    0    id
     RETURN    ${Response}
 
 Get User By ID
