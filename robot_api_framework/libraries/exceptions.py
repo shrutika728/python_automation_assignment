@@ -1,0 +1,2 @@
+class APIValidationError(Exception):
+    pass
